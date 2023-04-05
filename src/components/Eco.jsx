@@ -35,7 +35,7 @@ const SubTitle = styled.p`
     font-style: normal;
     font-weight: 400;
     font-size: 36px;
-    line-height: 49px;
+    line-height: 50px;
     color: #7EB693;
     margin-bottom: 0;
     margin-top: 0;
@@ -46,7 +46,7 @@ const Title = styled.h3`
     font-style: normal;
     font-weight: 800;
     font-size: 50px;
-    line-height: 59px;
+    line-height: 60px;
     color: #274C5B;
     max-width: 600px;
     @media (max-width: 550px) {
@@ -62,7 +62,7 @@ const DescTitle = styled.div`
     font-style: normal;
     font-weight: 500;
     font-size: 25px;
-    line-height: 29px;
+    line-height: 30px;
     color: #274C5B;
 `
 const DescText = styled.div`
@@ -72,7 +72,7 @@ const DescText = styled.div`
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
-    line-height: 165.4%;
+    line-height: 165%;
     color: #525C60;
     @media (max-width: 550px) {
         font-size: 16px;

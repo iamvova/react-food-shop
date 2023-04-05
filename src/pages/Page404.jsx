@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import image from '../constants/image'
+import { Link } from 'react-router-dom'
 
 const Container = styled.div``
 const Content = styled.div`
@@ -80,7 +81,7 @@ const Page404 = () => {
           <Code>404</Code>
           <Title>Page not found</Title>
           <Text>The page you are looking for doesn't exist or has been moved</Text>
-          <Button>Go to Homepage <img src={image.introButtonIcon} alt="next" /></Button>
+          <Link to={'/'}><Button>Go to Homepage <img src={image.introButtonIcon} alt="next" /></Button></Link>
         </ContentWrap>
       </Content>
       <Footer />

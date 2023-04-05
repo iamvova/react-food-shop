@@ -25,8 +25,11 @@ const Container = styled.div`
   align-items: center;
 `
 const ContentTop = styled.div`
-display: flex;
+  display: flex;
   justify-content: center;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `
 const Content = styled.div`
   width: 90%;
@@ -36,6 +39,9 @@ const Content = styled.div`
   padding: 20px;
   padding-top: 100px;
   position: relative;
+  @media (max-width: 768px) {
+    padding-top: 40px;
+  }
 `
 const Title = styled.h6`
   font-family: 'Roboto';
@@ -53,10 +59,16 @@ const Img = styled.div`
   & img{
     width:100%;
   }
+  @media (max-width: 768px) {
+    max-width: 250px;
+  }
 `
 const DecriptionContent = styled.div`
   margin-bottom: 100px;
   margin-left: 40px;
+  @media (max-width: 768px) {
+    margin-bottom: 50px;
+  }
 `
 const Desc = styled.div`
   font-family: 'Open Sans';
@@ -66,7 +78,11 @@ const Desc = styled.div`
   line-height: 165.4%;
   color: #525C60;
   max-width:650px;
-
+  @media (max-width: 768px) {
+    max-width:450px;
+    line-height: 150%;
+    font-size: 16px;
+  }
 `
 const CrossPrise = styled.span`
   font-family: 'Open Sans';
@@ -106,6 +122,10 @@ const Stars = styled.div`
   margin-top: 20px;
   margin-bottom: 25px;
   color: #FFA858;
+  @media (max-width: 768px) {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
 `
 const HideModal = styled.div`
   position: absolute;
@@ -180,6 +200,10 @@ const DecriptionText = styled.div`
   line-height: 165.4%;
   text-align: center;
   color: #525C60;
+  @media (max-width: 768px) {
+    font-size: 16px;
+    line-height: 150%;
+  }
 `
 
 
@@ -221,7 +245,6 @@ const Modal = ({product, isOpen, setIsOpen}) => {
   const handleChange = (e) => {
     const newValue = e.target.value.replace(/[^\d]/g, '')
     setValue(newValue)
-    console.log(typeof value)
   }
 
   const handleKeyPress = (e) => {

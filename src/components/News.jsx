@@ -63,6 +63,9 @@ const Cards = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (max-width: 1150px) {
+        flex-direction: column;
+    }
 `
 const Card = styled.div`
     margin-left: 10px;
@@ -72,7 +75,11 @@ const Card = styled.div`
     height: 400px;
     background: ${props => `url(${props.background})`};
     position: relative;
-    
+    &:first-child{
+        @media (max-width: 1150px) {
+            margin-bottom: 100px;
+        }
+    }
     
     
 `

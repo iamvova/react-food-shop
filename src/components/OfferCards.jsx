@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import ProductCard from './ProductCard'
 
 const Container = styled.div`
-    height: 100vh;
+    padding-bottom: 50px;
     background: #274C5B;
 `
 const SubTitle = styled.p`
@@ -19,11 +19,13 @@ const SubTitle = styled.p`
 `
 const Title = styled.h3`
     margin-top: 0;
+    margin-bottom: 30px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 800;
     font-size: 50px;
     color: #fff;
+    
 `
 const Wrapper = styled.h3`
     max-width: 1400px;
@@ -35,20 +37,19 @@ const Cards = styled.div`
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  @media (max-width: 1250px) {
+    justify-content: center;
+  }
 `
 
 const OfferCards = ({products}) => {
     return (
         <Container>
             <Wrapper>
-                
                 <SubTitle>Offer</SubTitle>
                 <Title>We Offer Organic For You</Title>
-                <Cards>
-                    {products.slice(0, 4).map((i)=>(<ProductCard key={i._id} product={i} />))}
-                </Cards>
+                <Cards>{products.slice(0, 4).map((i)=>(<ProductCard key={i._id} product={i} />))}</Cards>
             </Wrapper>
-        
         </Container>
     )
 }

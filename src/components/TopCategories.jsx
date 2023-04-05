@@ -9,6 +9,10 @@ const Container = styled.div`
 
     padding: 150px 0;
     background: #F1F8F4;
+    @media (max-width: 1150px) {
+      flex-direction: column;
+      padding: 100px;
+    }
 `
 const Category = styled.div`
     width: 600px;
@@ -19,7 +23,9 @@ const Category = styled.div`
     justify-content: center;
     align-items: center;
     cursor: pointer;
-
+    @media (max-width: 1400px) {
+      flex-direction: column;
+    }
 `
 
 const CategoryBlock = styled.div`

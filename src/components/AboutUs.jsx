@@ -6,8 +6,16 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     background: #F9F8F8;
+    @media (max-width: 1150px) {
+        flex-direction: column;
+        padding: 100px 0;
+    }
 `
-const ImgContent = styled.div``
+const ImgContent = styled.div`
+    @media (max-width: 1150px) {
+        display: none;
+    }
+`
 const DescContent = styled.div`
     margin-left: 40px;
 
@@ -30,6 +38,10 @@ const Title = styled.div`
     width: 500px;
     margin-top: 10px;
     margin-bottom: 15px;
+    @media (max-width: 550px) {
+        width: 400px;
+        font-size: 45px;
+    }
 `
 const Description = styled.div`
     font-family: 'Open Sans';
@@ -40,6 +52,10 @@ const Description = styled.div`
     color: #525C60;
     width: 500px;
     margin-bottom: 45px;
+    @media (max-width: 550px) {
+        width: 400px;
+        font-size: 16px;
+    }
 `
 const DescCategoty = styled.div`
     display: flex;
@@ -67,6 +83,10 @@ const CategoryText = styled.div`
     color: #525C60;
     width: 444px;
     margin-top: 7px;
+    @media (max-width: 550px) {
+        width: 300px;
+        font-size: 16px;
+    }
 `
 const Button = styled.button`
     width: 220px;

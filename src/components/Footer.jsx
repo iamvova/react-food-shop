@@ -8,6 +8,8 @@ const Container = styled.div`
     display: flex;
     justify-content: center;
     padding-top: 100px;
+    @media (max-width: 980px) {
+    }
 `
 const Title = styled.div`
     font-family: 'Roboto';
@@ -22,7 +24,13 @@ const Contact = styled.div`
     display: flex;
     flex-direction: column;
     align-items: end;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
     margin-right: 30px;
+    @media (max-width: 980px) {
+        display: none;
+    }
 `
 const ContactTitle = styled.div`
     font-family: 'Open Sans';
@@ -45,6 +53,10 @@ const ContactText = styled.div`
 const Social = styled.div`
     border-right: 1px solid #D5D5D5;
     border-left: 1px solid #D5D5D5;
+    @media (max-width: 980px) {
+        border-right: 0;
+        border-left: 0;
+    }
 `
 const SocialLogo = styled.div`
     text-align: center;
@@ -63,10 +75,19 @@ const SocialDesc = styled.p`
     max-width: 550px;
     text-align: center;
     color: #525C60;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
 `
 
 const Pages = styled.div`
     margin-left: 30px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    @media (max-width: 980px) {
+        display: none;
+    }
 `
 const List = styled.div``
 const ListItem = styled.div`
@@ -82,6 +103,9 @@ const Copyright = styled.div`
     text-align: center;
     color: #525C60;
     margin: 20px 0;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
 `
 
 

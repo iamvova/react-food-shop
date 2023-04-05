@@ -65,6 +65,10 @@ const FormRow = styled.div`
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 10px;
+    
+    @media (max-width: 650px) {
+        flex-direction: column;
+    }
 `
 const FormCol = styled.div`
     flex-basis: 48%;
@@ -134,7 +138,8 @@ const CartForm = () => {
                     <FormRow>
                         <FormCol>
                             <Label for="input5">Message</Label>
-                            <Textarea name="input5" cols="85" rows="10"></Textarea>
+                            {window.innerWidth < 600 ? <Textarea name="input5" cols="40" rows="10"></Textarea> : <Textarea name="input5" cols="82" rows="10"></Textarea>}
+                            
                         </FormCol>
                     </FormRow>
                     <Link to={'/thank'}><SubmitButton style={{ backgroundColor: buttonColor }} type="submit">Confirm</SubmitButton></Link>

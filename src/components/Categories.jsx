@@ -33,6 +33,9 @@ const Cards = styled.div`
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  @media (max-width: 1250px) {
+    justify-content: center;
+  }
 `
 const MoreBtn = styled.button`
   width: 170px;

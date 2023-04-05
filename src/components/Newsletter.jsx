@@ -19,6 +19,13 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 1050px) {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding-top: 40px;
+  }
 `
 
 const Title = styled.h3`
@@ -30,15 +37,27 @@ const Title = styled.h3`
   color: #FFFFFF;
   width: 357px;
   margin-left: 70px;
+  @media (max-width: 1050px) {
+    margin-left: 0;
+    margin-bottom: 20px;
+    line-height: 50px;
+    font-size: 40px;
+  }
 `
 const Form = styled.form`
   margin-right: 100px;
+  @media (max-width: 1050px) {
+    margin-right: 0;
+  }
 `
 const Input = styled.input`
   padding: 25px 130px 30px 30px;
   background: #FFFFFF;
   border-radius: 16px;
   border: 0;
+  @media (max-width: 1050px) {
+    margin-bottom: 10px;
+  }
 `
 const Button = styled.button`
   border-radius: 16px;

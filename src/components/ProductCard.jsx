@@ -9,6 +9,9 @@ const Container = styled.div`
     padding: 20px;
     cursor: pointer;
     position: relative;
+    @media (max-width: 1250px) {
+        margin: 20px;
+    }
 `
 
 const CategoryName = styled.span`
@@ -36,11 +39,11 @@ const ProductName = styled.h6`
     margin-top: 10px;
 `
 const Img = styled.div`
-    background: ${props=>`url(${props.background})`};
-    background-blend-mode: multiply;
-    background-repeat: no-repeat;
     width: 300px;
     height: 350px;
+    & img{
+        width: 100%;
+    }
 `
 const Price = styled.div`
     display: flex;
@@ -84,23 +87,20 @@ const ProductCard = ({product}) => {
 
     const [isOpen, setIsOpen] = useState(false);
 
-    const toggleModal = () => {
-        setIsOpen(!isOpen)
-    }
+    const toggleModal = () => setIsOpen(!isOpen)
 
     const elementToRender = <span>★</span>
     const elements = []
 
     if(product) for (let i = 0; i < product.stars; i++) elements.push(elementToRender)
     
-
     return (
         <>
             {product && (
                 <>
                     <Container onClick={toggleModal}>
                         <CategoryName>{product.categories}</CategoryName>
-                        <Img background={product.img}></Img>
+                        <Img><img src={product.img} alt="img" /></Img>
                         <ProductName>{product.title}</ProductName>
                         <Hr />
                         <Price>

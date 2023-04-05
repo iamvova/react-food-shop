@@ -18,7 +18,7 @@ const Main = () => {
 
   useEffect(()=>{
     async function fetchData(){
-      await fetch("http://localhost:8800/products")
+      await fetch("http://localhost:8800/products/discount")
       .then((response) => response.json())
       .then((data) => {
         setProducts(data)
@@ -28,7 +28,7 @@ const Main = () => {
     fetchData()
   }, [])
 
-basic loyaut 
+
   return (
     <div>
       <Navbar />
@@ -47,4 +47,4 @@ basic loyaut
   )
 }
 
-export d
+export default Main

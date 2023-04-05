@@ -11,6 +11,7 @@ const Container = styled.div`
     min-width: 100%;
     
     margin-top: 30px;
+    padding-left: 30px;
     
 `
 const Wrapper = styled.div`
@@ -25,6 +26,9 @@ const SubTitle = styled.p`
     font-size: 36px;
     line-height: 49px;
     color: #68A47F;
+    @media (max-width: 1150px) {
+        padding-top: 150px;
+    }
 `
 const Title = styled.h1`
     font-family: 'Roboto';

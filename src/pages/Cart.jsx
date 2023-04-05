@@ -4,7 +4,7 @@ import Footer from '../components/Footer'
 import CartForm from '../components/CartForm'
 import Navbar from '../components/Navbar'
 import image from '../constants/image'
-import { useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 
 const Container = styled.div`
@@ -40,12 +40,19 @@ const Content = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (max-width: 910px) {
+        flex-direction: column;
+        justify-content: center;
+    }
 `
 
 const ProductData = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (max-width: 910px) {
+        flex-direction: column;
+    }
 `
 
 const Img = styled.div`
@@ -74,6 +81,10 @@ const CrossPrice = styled.div`
     line-height: 28px;
     color: #B8B8B8;
     margin: 0 20px;
+    
+    @media (max-width: 910px) {
+        margin-top: 30px;
+    }
 `
 const CurrentPrice = styled.div`
     font-family: 'Roboto';
@@ -82,6 +93,10 @@ const CurrentPrice = styled.div`
     font-size: 40px;
     line-height: 47px;
     color: #274C5B;
+    
+    @media (max-width: 910px) {
+        margin-bottom: 30px;
+    }
 `
 
 const ProductQuantity = styled.div`
@@ -124,6 +139,10 @@ const TotalCost = styled.div`
     line-height: 47px;
     color: #274C5B;
     margin-bottom: 20px;
+    @media (max-width: 910px) {
+        text-align: center;
+        margin-top: 50px;
+    }
 `
 const Discount = styled.div`
     text-align: right;
@@ -133,10 +152,14 @@ const Discount = styled.div`
     font-size: 40px;
     line-height: 47px;
     color: #274C5B;
+    @media (max-width: 910px) {
+        text-align: center;
+    }
 `
 const TotalPriceWrapper = styled.div`
     max-width: 1400px;
     margin: 0 auto;
+    
 `
 
 const ToOrderButton = styled.div`
@@ -204,7 +227,7 @@ const Cart = () => {
                         </ProductData>
                         <ProductQuantity>
                             Quantity: <InputQuantity type="text" value={value} onChange={handleChange} onKeyPress={handleKeyPress} />
-                            <Close>X</Close>
+                            <Link to={'/'}><Close>X</Close></Link>
                         </ProductQuantity>
                     </Content>
                     <TotalPriceWrapper>

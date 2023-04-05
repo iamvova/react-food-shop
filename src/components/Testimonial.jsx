@@ -6,10 +6,13 @@ import image from '../constants/image'
 const Container = styled.div`
     background:  ${props => `url(${props.background})`};
     background-repeat: no-repeat;
-    height: 100vh;
     min-width: 100%;
     background-attachment: fixed;   
     text-align: center;
+    padding-bottom: 50px;
+    @media (max-width: 1150px) {
+        background: rgb(241, 238, 238, 0.5);
+    }
 `
 const SubTitle = styled.p`
     font-family: 'Yellowtail';
@@ -20,6 +23,9 @@ const SubTitle = styled.p`
     color: #7EB693;
     text-align: center;
     margin-bottom: 0;
+    @media (max-width: 1150px) {
+        padding-top: 50px;
+    }
 `
 const Title = styled.h3`
     margin-top: 0;
@@ -73,11 +79,19 @@ const Hr = styled.hr`
     margin-bottom: 70px;
     color: #E0E0E0;
     `
-const SliderContainer = styled.div``
+const SliderContainer = styled.div`
+    @media (max-width: 1150px) {
+        backgroung: #fff;
+    }
+`
 const Stats = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    @media (max-width: 650px) {
+        flex-wrap: wrap;
+        
+    }
 `
 const StatsItem = styled.div`
     border: 2px solid #7EB693;
@@ -86,6 +100,11 @@ const StatsItem = styled.div`
     border-radius: 50%;
     padding: 5px;
     margin: 0 10px;
+    @media (max-width: 1150px) {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 30px;
+    }
 
     & div{
         background: #F1F1F1;
@@ -104,7 +123,10 @@ const StatsItem = styled.div`
             font-size: 50px;
             line-height: 59px;
             color: #274C5B;
-
+            @media (max-width: 1150px) {
+                line-height: 30px;
+                font-size: 30px;
+            }
         }
         font-family: 'Open Sans';
         font-style: normal;
@@ -112,6 +134,10 @@ const StatsItem = styled.div`
         font-size: 18px;
         line-height: 165.4%;
         color: #274C5B;
+        @media (max-width: 1150px) {
+            line-height: 130%;
+            font-size: 16px;
+        }
     }
 `
 
@@ -140,9 +166,9 @@ const Testimonial = () => {
 
             <Stats>
                 <StatsItem><div><span>100%</span> organic</div></StatsItem>
-                <StatsItem><div><span>100%</span> organic</div></StatsItem>
-                <StatsItem><div><span>100%</span> organic</div></StatsItem>
-                <StatsItem><div><span>100%</span> organic</div></StatsItem>
+                <StatsItem><div><span>285</span> Active Product</div></StatsItem>
+                <StatsItem><div><span>350+</span> Organic Orchads</div></StatsItem>
+                <StatsItem><div><span>25+</span> Years of Farming</div></StatsItem>
             </Stats>
         </Container>
     )

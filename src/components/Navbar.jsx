@@ -25,6 +25,9 @@ const List = styled.ul`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (max-width: 950px) {
+        display: none;
+    }
 `
 const ListItem = styled.li`
     margin: 0 15px;
@@ -49,6 +52,9 @@ const InputsContent = styled.div`
 `
 const Search = styled.div`
     position: relative;
+    @media (max-width: 1250px) {
+        display: none;
+    }
 `
 const SearchInput = styled.input`
     background: #FAFAFA;

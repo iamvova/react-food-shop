@@ -18,6 +18,17 @@ const ContentBlock = styled.div`
     border-radius: 30px;
     padding: 30px;
     margin-top: 200px;
+    @media (max-width: 1400px) {
+        left: -600px;
+    }
+    @media (max-width: 980px) {
+        left: -900px;
+        width: 500px;
+    }
+    @media (max-width: 550px) {
+        left: -950px;
+    }
+    
 `
 const SubTitle = styled.p`
     font-family: 'Yellowtail';
@@ -38,6 +49,12 @@ const Title = styled.h3`
     line-height: 59px;
     color: #274C5B;
     max-width: 600px;
+    @media (max-width: 550px) {
+        font-size: 40px;
+        line-height: 50px;
+        max-width: 400px;
+        margin-bottom: 20px;
+    }
 `
 const DescTitle = styled.div`
     max-width: 600px;
@@ -57,6 +74,10 @@ const DescText = styled.div`
     font-size: 18px;
     line-height: 165.4%;
     color: #525C60;
+    @media (max-width: 550px) {
+        font-size: 16px;
+        line-height: 150%;
+    }
 `
 
 const Eco = () => {
